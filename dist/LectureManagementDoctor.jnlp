@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LectureManagementDoctor.jnlp">
+  <information>
+    <title>LectureManagementDoctor</title>
+    <vendor>Amr</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="LectureManagementDoctor.jar" size="311684" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2183063" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.20.0.jar" size="6637012" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="LectureManagementDoctor" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="lecturemanagementdoctor.doctor.launcher"  name="LectureManagementDoctor" />
+  <update check="always"/>
+</jnlp>

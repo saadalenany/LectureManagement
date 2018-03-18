@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagementdoctor.doctor.lecture.main.quiz.QuizFXMLController">
+    <top>
+        <HBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXTextField fx:id="numberOfChoices" focusColor="#2ecc71" labelFloat="true" promptText="Number Of Choices" style="-fx-text-fill: #2ecc71;" unFocusColor="#6ae88e" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                    </HBox.margin>
+                </JFXTextField>
+                <JFXTextField fx:id="quiz_name" focusColor="#2ecc71" labelFloat="true" promptText="Quiz Name" style="-fx-text-fill: #2ecc71;" unFocusColor="#6ae88e" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                    </HBox.margin>
+                </JFXTextField>
+                <JFXButton fx:id="add" onAction="#onAdd" ripplerFill="#6ae88e" style="-fx-background-color: #2ecc71;" text="+" textFill="WHITE" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                    </HBox.margin>
+                </JFXButton>
+                <JFXButton fx:id="remove" onAction="#onRemove" ripplerFill="#6ae88e" style="-fx-background-color: #2ecc71;" text="-" textFill="WHITE" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                    </HBox.margin>
+                </JFXButton>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" top="20.0" />
+            </padding>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXCheckBox fx:id="allowmarks" checkedColor="#2ecc71" text="Allow Preview Marks" textFill="#2ecc71" unCheckedColor="#6ae88e" wrapText="true" />
+                <JFXButton fx:id="send" alignment="CENTER" onAction="#onSend" ripplerFill="#6ae88e" style="-fx-background-color: #2ecc71;" text="Send" textAlignment="CENTER" textFill="WHITE" />
+                <JFXTextField fx:id="timePerMinute" focusColor="#2ecc71" labelFloat="true" promptText="Time Per Minute" style="-fx-text-fill: #2ecc71;" unFocusColor="#6ae88e" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="5.0" top="20.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="scrollcontent" alignment="TOP_CENTER" spacing="20.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content></ScrollPane>
+    </center>
+</BorderPane>
