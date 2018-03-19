@@ -12,7 +12,6 @@ import javafx.scene.Node;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import lecturemanagementdoctor.doctor.Models.ChoiceData;
-import lecturemanagementdoctor.doctor.Models.Quiz;
 import lecturemanagementdoctor.doctor.Models.QuizQuestion;
 
 /**
