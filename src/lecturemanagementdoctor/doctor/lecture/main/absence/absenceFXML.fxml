@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DDDD99;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagementdoctor.doctor.lecture.main.absence.AbsenceFXMLController">
-    
-</AnchorPane>
+<BorderPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagementdoctor.doctor.lecture.main.absence.AbsenceFXMLController">
+    <top>
+        <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="10.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+            <children>
+                <JFXButton alignment="CENTER" maxWidth="1.7976931348623157E308" ripplerFill="#6ae88e" style="-fx-background-color: #6ae88e;" text="Take Absence" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                    </VBox.margin>
+                </JFXButton>
+                <JFXTextField alignment="CENTER" focusColor="#2ecc71" style="-fx-text-fill: #2ecc71;" unFocusColor="#6ae88e" labelFloat="true" promptText="Search..." VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </JFXTextField>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <JFXButton alignment="CENTER" maxWidth="1.7976931348623157E308" ripplerFill="#6ae88e" style="-fx-background-color: #2ecc71;" text="Submit Absence" textFill="WHITE" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="5.0" />
+            </BorderPane.margin>
+        </JFXButton>
+    </bottom>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</BorderPane>

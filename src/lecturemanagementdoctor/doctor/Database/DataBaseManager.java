@@ -22,12 +22,14 @@ public class DataBaseManager {
     String[] sqlCreate = {StaticsQueries.CREATE_DEPARTMENT, StaticsQueries.CREATE_ACADEMIC_YEAR,
         StaticsQueries.CREATE_COURSES, StaticsQueries.CREATE_USER, StaticsQueries.CREATE_STUDENT,
         StaticsQueries.CREATE_DOCTOR, StaticsQueries.CREATE_LECTURE, StaticsQueries.CREATE_QUIZ,
-        StaticsQueries.CREATE_QUIZQUESTION, StaticsQueries.CREATE_CHAT};
+        StaticsQueries.CREATE_QUIZQUESTION, StaticsQueries.CREATE_CHAT,
+        StaticsQueries.CREATE_CHOICEDATA, StaticsQueries.CREATE_SLIDE};
 
     String[] sqlDrop = {StaticsQueries.DROP_CHAT, StaticsQueries.DROP_QUIZQUESTION,
         StaticsQueries.DROP_QUIZ, StaticsQueries.DROP_LECTURE, StaticsQueries.DROP_DOCTOR,
         StaticsQueries.DROP_STUDENT, StaticsQueries.DROP_USER, StaticsQueries.DROP_COURSES,
-        StaticsQueries.DROP_ACADEMIC_YEAR, StaticsQueries.DROP_DEPARTMENT};
+        StaticsQueries.DROP_ACADEMIC_YEAR, StaticsQueries.DROP_DEPARTMENT,
+        StaticsQueries.DROP_CHOICEDATA, StaticsQueries.DROP_SLIDE};
 
     public DataBaseManager() {
         try {

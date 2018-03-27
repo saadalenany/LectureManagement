@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="801.0" style="-fx-border-color: #000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagementdoctor.doctor.lecture.main.MainFXMLController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="801.0" style="-fx-border-color: #000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagementdoctor.doctor.lecture.main.MainFXMLController">
     <bottom>
         <BorderPane prefHeight="17.0" prefWidth="801.0" style="-fx-background-color: #2ECC71;" BorderPane.alignment="CENTER">
             <right>
@@ -77,7 +78,7 @@
                         </JFXButton>
                         <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#closeAction" onMouseEntered="#closeEnter" onMouseExited="#closeExit" prefHeight="0.0" prefWidth="0.0">
                             <graphic>
-                                <ImageView fx:id="close" onMouseEntered="#closeEnter" onMouseExited="#closeExit" fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="close" fitHeight="12.0" fitWidth="12.0" onMouseEntered="#closeEnter" onMouseExited="#closeExit" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../../../res/close.png" />
                                     </image>
@@ -218,4 +219,30 @@
             </top>
         </BorderPane>
     </left>
+    <center>
+        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane fx:id="dynamicScroller" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" />
+                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#onPlay" StackPane.alignment="BOTTOM_RIGHT">
+                    <StackPane.margin>
+                        <Insets bottom="20.0" right="20.0" />
+                    </StackPane.margin>
+                    <children>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="60.0" ripplerFill="#a4dafc" style="-fx-background-radius: 60; -fx-background-color: #2ecc71;" wrapText="true" BorderPane.alignment="TOP_RIGHT">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#onPlay">
+                                    <image>
+                                        <Image url="@../../../res/play.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                     <effect>
+                        <DropShadow color="WHITE" />
+                     </effect>
+                        </JFXButton>
+                    </children>
+                </StackPane>
+            </children>
+        </StackPane>
+    </center>
 </BorderPane>

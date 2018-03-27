@@ -50,7 +50,6 @@ public class StaticsQueries {
     public static final String CREATE_LECTURE = "CREATE TABLE IF NOT EXISTS Lecture (\n"
             + "	Lecture_id integer PRIMARY KEY AUTOINCREMENT,\n"
             + "	lecture_name text,\n"
-            + "	slide_path text,\n"
             + "	doctor_id integer,\n"
             + "	course_id integer,\n"
             + "		FOREIGN KEY (doctor_id) REFERENCES Doctor(Doctor_id),\n"
@@ -68,7 +67,6 @@ public class StaticsQueries {
             + "	QuizQuestion_id integer PRIMARY KEY AUTOINCREMENT,\n"
             + "	numberofchoices integer,\n"
             + "	question_data text,\n"
-            + "	choicesdata text,\n"
             + "	right_answer integer,\n"
             + "	quiz_id integer,\n"
             + "		FOREIGN KEY (quiz_id) REFERENCES Quiz(Quiz_id)\n"
@@ -86,6 +84,20 @@ public class StaticsQueries {
             + "		FOREIGN KEY (message_lecture) REFERENCES Lecture(Lecture_id)\n"
             + ");";
 
+    public static final String CREATE_CHOICEDATA = "CREATE TABLE ChoiceData (\n"
+            + "	choice_id integer PRIMARY KEY AUTOINCREMENT,\n"
+            + "	choice_content text,\n"
+            + "	question_id integer,\n"
+            + "		FOREIGN KEY (question_id) REFERENCES QuizQuestion(QuizQuestion_id)\n"
+            + ");";
+
+    public static final String CREATE_SLIDE = "CREATE TABLE Slide (\n"
+            + "	slide_id integer PRIMARY KEY AUTOINCREMENT,\n"
+            + "	slide_path string,\n"
+            + "	lecture_id integer,\n"
+            + "		FOREIGN KEY (slide_id) REFERENCES Lecture(Lecture_id)\n"
+            + ");";
+
     public static String DROP_USER = "DROP TABLE User;";
     public static String DROP_DEPARTMENT = "DROP TABLE Department;";
     public static String DROP_ACADEMIC_YEAR = "DROP TABLE Academic_Year;";
@@ -96,5 +108,7 @@ public class StaticsQueries {
     public static String DROP_QUIZ = "DROP TABLE Quiz;";
     public static String DROP_QUIZQUESTION = "DROP TABLE QuizQuestion;";
     public static String DROP_CHAT = "DROP TABLE Chat;";
+    public static String DROP_CHOICEDATA = "DROP TABLE ChoiceData;";
+    public static String DROP_SLIDE = "DROP TABLE Slide;";
 
 }

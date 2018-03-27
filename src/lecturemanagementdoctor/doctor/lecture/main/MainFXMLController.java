@@ -18,6 +18,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -61,9 +62,6 @@ public class MainFXMLController implements Initializable {
     private ImageView profile;
 
     @FXML
-    private BorderPane mainPane;
-
-    @FXML
     private ImageView close;
 
     @FXML
@@ -74,6 +72,9 @@ public class MainFXMLController implements Initializable {
 
     @FXML
     private BorderPane ListBordePane;
+
+    @FXML
+    private ScrollPane dynamicScroller;
 
     //------------------------------------------
     private OpenCloseList ListAnim;
@@ -88,7 +89,7 @@ public class MainFXMLController implements Initializable {
 
     @FXML
     void LectureClick(ActionEvent event) {
-        setSession(0, "lecture/lectureFXML.fxml");
+        setSession(0, "lecture/create/createLecture_fragment.fxml");
     }
 
     @FXML
@@ -178,17 +179,17 @@ public class MainFXMLController implements Initializable {
 
     @FXML
     void maxAction(ActionEvent event) {
-        Stage stage = (Stage)max.getScene().getWindow();
+        Stage stage = (Stage) max.getScene().getWindow();
         if (stage.isFullScreen()) {
             stage.setFullScreen(false);
-        }else{
+        } else {
             stage.setFullScreen(true);
         }
     }
 
     @FXML
     void minAction(ActionEvent event) {
-        Stage stage = (Stage)min.getScene().getWindow();
+        Stage stage = (Stage) min.getScene().getWindow();
         stage.setIconified(true);
     }
 
@@ -219,6 +220,11 @@ public class MainFXMLController implements Initializable {
 
     @FXML
     void closeExit(MouseEvent event) {
+
+    }
+
+    @FXML
+    void onPlay(MouseEvent event) {
 
     }
 
@@ -259,6 +265,11 @@ public class MainFXMLController implements Initializable {
                 Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        mainPane.setCenter(Sessions[index]);
+        dynamicScroller.setContent(Sessions[index]);
     }
+
+    public ScrollPane getDynamicScroller() {
+        return dynamicScroller;
+    }
+
 }

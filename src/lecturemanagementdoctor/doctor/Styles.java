@@ -13,7 +13,7 @@ public class Styles {
 
     //three degrees of the main greenish color
     public static final String colorPrimary = "#2ecc71";
-    public static final String colorSecondary = "54E491";
+    public static final String colorSecondary = "#54E491";
     public static final String colorTertiary = "#6ae88e";
 
     //variant colors for icons

@@ -3,8 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Faculty/Graduation%20Project/LectureManagementDoctor/LectureManagementDoctor/src/lecturemanagementdoctor/doctor/lecture/main/quiz/QuizFXMLController.java</file>
-            <file>file:/E:/Faculty/Graduation%20Project/LectureManagementDoctor/LectureManagementDoctor/src/lecturemanagementdoctor/doctor/lecture/main/quiz/QuizDataOrganizer.java</file>
+            <file>file:/E:/Faculty/Graduation%20Project/LectureManagementDoctor/LectureManagementDoctor/src/lecturemanagementdoctor/doctor/lecture/main/lecture/view/ViewLectureController.java</file>
+            <file>file:/E:/Faculty/Graduation%20Project/LectureManagementDoctor/LectureManagementDoctor/src/lecturemanagementdoctor/doctor/lecture/main/lecture/create/CreateLectureController.java</file>
+            <file>file:/E:/Faculty/Graduation%20Project/LectureManagementDoctor/LectureManagementDoctor/src/lecturemanagementdoctor/doctor/lecture/main/lecture/view/viewLecture_fragment.fxml</file>
         </group>
     </open-files>
 </project-private>

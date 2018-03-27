@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagementdoctor.doctor.lecture.main.lecture.create.CreateLectureController">
+    <center>
+        <SplitPane fx:id="splitPane" dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+            <items>
+                <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff;">
+                    <top>
+                        <JFXButton alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onUploadNewFiles" ripplerFill="#6ae88e" style="-fx-background-color: #2ecc71;" text="Upload New File(s)" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER" />
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <center>
+                        <ListView fx:id="listOfNewFiles" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </BorderPane.margin>
+                        </ListView>
+                    </center>
+               <bottom>
+                  <VBox alignment="CENTER" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                     <children>
+                              <StackPane style="-fx-background-color: #ffffff;">
+                                  <children>
+                                      <Circle fx:id="startButton" fill="#2ecc71" onMouseClicked="#onStart" radius="42.0" stroke="#6ae88e" strokeType="INSIDE">
+                                          <cursor>
+                                              <Cursor fx:constant="HAND" />
+                                          </cursor>
+                                      </Circle>
+                                      <Label alignment="CENTER" onMouseClicked="#onStart" text="Start" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                                          <cursor>
+                                              <Cursor fx:constant="HAND" />
+                                          </cursor>
+                                      </Label>
+                                  </children>
+                              </StackPane>
+                        <JFXProgressBar fx:id="newBar" maxWidth="1.7976931348623157E308" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXProgressBar>
+                     </children>
+                  </VBox>
+               </bottom>
+                </BorderPane>
+                <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff;">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <top>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Open Old File(s)" textAlignment="CENTER" textFill="#2ecc71" wrapText="true" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                    </top>
+                    <center>
+                        <ListView fx:id="listOfOldFiles" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </BorderPane.margin>
+                        </ListView>
+                    </center>
+               <bottom>
+                  <VBox maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                     <children>
+                              <JFXButton fx:id="startOldButton" alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#onStartLectureWithOldFiles" style="-fx-background-color: #2ecc71;" text="Start Lecture with Old File(s)" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                        <StackPane maxWidth="1.7976931348623157E308">
+                           <children>
+                              <JFXProgressBar fx:id="oldBar" maxWidth="1.7976931348623157E308" visible="false">
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </JFXProgressBar>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </bottom>
+                </BorderPane>
+            </items>
+        </SplitPane>
+
+    </center>
+</BorderPane>

@@ -8,9 +8,19 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="LectureManagementDoctor.jar" size="311684" download="eager" />
+    <jar href="LectureManagementDoctor.jar" size="328808" download="eager" />
+    <jar href="lib\curvesapi-1.04.jar" size="98365" download="eager" />
+    <jar href="lib\icepdf-core-4.3.3.jar" size="801279" download="eager" />
+    <jar href="lib\icepdf-viewer-4.3.3.jar" size="425005" download="eager" />
     <jar href="lib\jfoenix.jar" size="2183063" download="eager" />
+    <jar href="lib\poi-3.16-beta1.jar" size="2603977" download="eager" />
+    <jar href="lib\poi-examples-3.16-beta1.jar" size="369449" download="eager" />
+    <jar href="lib\poi-excelant-3.16-beta1.jar" size="30957" download="eager" />
+    <jar href="lib\poi-ooxml-3.16-beta1.jar" size="1362767" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.16-beta1.jar" size="5863326" download="eager" />
+    <jar href="lib\poi-scratchpad-3.16-beta1.jar" size="1332736" download="eager" />
     <jar href="lib\sqlite-jdbc-3.20.0.jar" size="6637012" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="LectureManagementDoctor" >
     <param name="requiredFXVersion" value="8.0+"/>

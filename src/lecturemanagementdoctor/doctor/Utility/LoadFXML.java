@@ -34,7 +34,7 @@ public class LoadFXML {
         Parent root = null;
         try {
             loader = new FXMLLoader(getClass().getResource(FXMLPath));
-            root = (Pane) loader.load();
+            root = loader.load();
             this.parent = root;
             this.controller = loader.getController();
         } catch (IOException ex) {
